@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/mysql/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SQL - Lucas Matheus</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SQL";
+        var mkdocs_page_input_path = "mysql.md";
+        var mkdocs_page_url = "/mysql/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Lucas Matheus
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">SQL</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#o-que-e-sql">O que é SQL?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#o-que-e-um-sgbd">O que é um SGBD?</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../ruby.md">Ruby</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../python.md">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../java.md">Java</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Lucas Matheus</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>SQL</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="sqlstructured-query-language-banco-de-dados-i-e-conceitos-de-banco-de-dados">SQL(Structured Query Language) -  Banco de Dados I e Conceitos de Banco de Dados</h3>
+<h5 id="o-que-e-sql">O que é SQL?</h5>
+<hr>
+<p>Structured Query Language, ou Linguagem de Consulta Estruturada ou SQL, é a linguagem de pesquisa declarativa padrão para banco de dados relacional. Muitas das características originais do SQL foram inspiradas na álgebra relacional. A linguagem é um grande padrão de banco de dados. Isto decorre da sua simplicidade e facilidade de uso. Ela se diferencia de outras linguagens de consulta a banco de dados no sentido em que uma consulta SQL especifica a forma do resultado e não o caminho para chegar a ele. Ela é uma linguagem declarativa em oposição a outras linguagens procedurais. Isto reduz o ciclo de aprendizado daqueles que se iniciam na linguagem.</p>
+<hr>
+<h5 id="o-que-e-um-sgbd">O que é um SGBD?</h5>
+<p>Um Sistema de Gerenciamento de Banco de Dados (português brasileiro) ou Sistema de Gestão de Bases de Dados (português europeu)(SGBD) — do inglês Data Base Management System (DBMS) — é o sistema de software responsável pelo gerenciamento de um ou mais bancos de dados. Seu principal objetivo é retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados. O SGBD disponibiliza uma interface para que seus clientes possam incluir, alterar ou consultar dados previamente armazenados. Em bancos de dados relacionais a interface é constituída pelas API (Application Programming Interface) ou drivers do SGBD, que executam comandos na linguagem SQL (Structured Query Language).</p>
+<p><center><img alt="Database" src="../imgs/database.png" /></center></p>
+<p><br></p>
+<h2 id="codigos-produzidos">Códigos Produzidos</h2>
+<p>Disciplina: Banco de Dados e Conceito de Banco de Dados </p>
+<p>SGBD: Postegres, Microsoft SQL Server, MYSQL</p>
+<hr>
+<p><b>Dado o modelo lógico acima, gere os scripts SQL para criação de todas as tabelas presentes nele, lembrando de incluir as chaves primarias, estrangeiras e os tipos de dados corretamente.</p>
+<p>Em seguida, crie também os scripts com o comando INSERT para inserir dados nas tabelas, de forma que cada uma deve possuir pelo menos um registro.</b></p>
+<p><center><img alt="Database" src="../imgs/modelo_logico.png" /></center></p>
+<pre><code class="language-sql">create database perfumes;
+use  perfumes;
+
+create table perfumes(
+nome varchar(50) not null primary key,
+quantidade integer not null,
+id_volume integer not null,
+id_marca integer not null,
+id_fixacao integer not null,
+id_essencia int not null
+);
+
+create table volumes(
+nome_essencia varchar(50) not null,
+
+id_essencia int primary key references perfumes(id_essencia));
+
+create table marcas(
+nome_marca varchar(50),
+id_marca int primary key references perfumes(id_marca));
+
+create table fixacoes(
+nome_fixacao varchar(50),
+id_fixacao int primary key references perfumes(id_fixacao));
+
+create table essencias(
+nome_essencia varchar(50),
+id_essencia int primary key references perfumes(id_fixacao));
+
+
+delimiter $$
+
+CREATE PROCEDURE SP_INSERT (IN sp_id1 INT, IN sp_id2 INT, IN sp_id3 INT, IN sp_id4 INT)
+BEGIN
+    INSERT INTO perfumes (id_volume, id_marca, id_essencia, id_fixacao) VALUES ( sp_id1, sp_id2, sp_id3, sp_id4 );
+END $$
+DELIMITER ;
+
+call SP_INSERT(1,2,3,4);
+
+desc perfumes;
+
+show columns from perfumes;
+
+
+
+insert into perfumes values(&quot;Lavanda&quot;,1,2,3,4,5);
+
+insert into volumes value(&quot;nome essencia1&quot;);
+
+insert into fixacoes value(&quot;fixacao boa&quot;); 
+insert into  essencias value(&quot;flor&quot;);
+insert into marcas value(&quot;boticario&quot;);
+</code></pre>
+<hr>
+
+<p><b>Implemente o DB físico usando o SGDB Microsoft SQL Server</b></p>
+<p><center><img alt="Database" src="../imgs/alvaro.jpg" /></center></p>
+<pre><code class="language-sql">CREATE TABLE marca (
+idMarcas INTEGER,
+descricao VARCHAR(100)
+
+);
+
+CREATE TABLE nacionalidades(
+    idNacionalidades SMALLINT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(30) NOT NULL
+
+);
+
+CREATE TABLE empresas(
+    idEmpresas SMALLINT AUTO_INCREMENT PRIMARY KEY,
+    descricaoEmpresas VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE clientes(
+    cpf_cnpj VARCHAR(20),
+    nome_razaoSocial VARCHAR(50),
+    endereco VARCHAR(100),
+    dataNascimento DATE,
+    email VARCHAR(100)
+
+);
+
+CREATE TABLE parcelas(
+    idParcelas SMALLINT AUTO_INCREMENT PRIMARY KEY,
+    vendas_idvendas SMALLINT,
+    valorParcela FLOAT,
+    mes VARCHAR(30),
+    ano INTEGER,
+    paga BOOLEAN
+
+);
+
+CREATE TABLE produtos(
+    idprodutos SMALLINT AUTO_INCREMENT PRIMARY KEY,
+    nacionalidades_idnacionalidades INTEGER,
+    nomeprod VARCHAR(100),
+    explosivo BOOLEAN
+);
+
+
+
+
+</code></pre>
+<hr>
+<p><b>Dado o modelo lógico, escreva o código, em linguagem SQL, capaz de produzir o resultado abaixo:</b>
+<center><img alt="Database" src="../imgs/Modelo_perfume.png" /></center>
+<br></p>
+<h5 id="resultado-esperado">Resultado esperado</h5>
+<p><center><img alt="Database" src="../imgs/resultado.png" /></center></p>
+<pre><code class="language-sql">SELECT * FROM PERFUMES WHERE quantidade = &gt;10 and quantidade&lt;=15 and nome = ''Baunilha&quot; and nome = &quot;Eau Cologne 7%&quot; and  nome = &quot;Eau Cologne 8%&quot; and valor=15
+</code></pre>
+<hr>
+<p><b>
+Para desenvolver um novo banco de dados no SGBD MySQL Community é necessário,
+primeiro, criar o banco de dados e em seguida indicar que irá utiliza-lo.
+Escreva os comandos SQL necessários para criar um banco chamado “loja” e, em seguida,
+o comando para indicar que irá trabalhar no banco de dados criado.
+Após criar e selecionar o banco de dados loja, você deverá escrever os comando do MySQL
+responsáveis por criar uma tabela chamada “funcionarios” com os atributos “codigo”,
+“nome”, “salario” e “data_de_nascimento”. Defina os tipos de dados mais apropriados para
+cada um deles.
+Escreva o comando do MySQL responsável por remover todos os registros de uma tabela
+chamada “cliente” cujo atributo “data_de_nascimento” seja anterior a 17 de janeiro de
+2001.
+Com comandos do MySQL, crie uma tabela chamada “alunos” com os campos “matricula”
+(inteiro), “nome” (texto com até 200 caracteres) e “curso” (texto com até 150 caracteres).
+Depois de criada a tabela insira dois novos alunos.
+</b></p>
+<pre><code class="language-sql">CREATE DATABASE loja;
+USE loja;
+CREATE TABLE FUNCIONARIOS
+(
+fun_nome VARCHAR(30),
+fun_codigo INT,
+fun_data_nascimento DATE,
+fun_salario INT
+);
+DELETE FROM CLIENTES;
+WHERE data_de_nascimento=&lt;'2001-01-17'
+
+CREATE TABLE alunos(
+alu_matricula INT,
+alu_nome VARCHAR(200),
+alu_texto VARCHAR(150)
+);
+INSERT INTO alunos('alu_nome')
+VALUES('Lucas Matheus Alves da Silva', 'Roziana Dantas dos Santos');
+
+</code></pre>
+<hr>
+<p><b> Considerando que existe uma tabela em um banco chamada “disciplinas” com um dos
+atributos chamado “turno”. Escreva duas formas distintas de selecionar todas as disciplinas cujo
+turno seja ‘Matutino’ e ‘Vespertino’.</b></p>
+<pre><code class="language-sql">SELECT turno
+FROM disciplinas WHERE turno BETWEEN 'Matutino' and 'Vespertino'
+
+SELECT turno
+FROM disciplinas WHERE turno 'Matuitno' and turno 'Vespertino'
+
+</code></pre>
+<hr>
+<p><b>Considerando uma tabela denominada “alimentos” com os atributos “nome”,
+“gramas_por_unidade” e “calorias_por_unidade” apresente uma consulta que possui como
+resultado uma lista com o nome dos alimentos com teor calórico menor que 1 caloria por grama. </b></p>
+<pre><code class="language-sql">SELECT nome, gramas_por_unidade, calorias_por_unidade
+FROM alimentos
+WHERE gramas_por_unidade and calorias_por_unidade &lt;1;
+</code></pre>
+<hr>
+<p><b>
+A Figura 1 representa os dados referentes aos empregados de uma empresa hipotética. Para resolver as questões, crie uma tabela chamada empregados e insira os dados
+apresentados na Figura 1:</p>
+<p>Apresente as instruções SQL necessárias para criar a tabela empregados.
+a) Todos os dados ordenados por matrícula.
+b) A quantidade de empregados da empresa.
+c) A matrícula, o nome e o salário de todos os empregados, ordenados por nome.
+d) A média salarial dos empregados com o tempo de serviço superior a 1 anos.
+e) O departamento, o nome e o salário dos empregados. Dentro do departamento, ordene
+os salários do maior para o menor.</p>
+<p></b></p>
+<p><center><img alt="Database" src="../imgs/figura_hipotetica.jpg" /></center></p>
+<pre><code class="language-sql">CREATE DATABASE Empresa;
+USE Empresa;
+CREATE TABLE empregados(
+emp_matricula INT,
+emp_nome VARCHAR(10),
+emp_depto VARCHAR(30) ,
+emp_funcao VARCHAR(30),
+emp_salario NUMERIC(4,2),
+emp_temposervico INT ,
+emp_inicioferias DATE ,
+emp_filhos INT,
+);
+
+SELECT emp_matricula
+FROM Empregados
+ORDER BY emp_matricula;
+SELECT ABS(EMP_matricula)
+From Empregados;
+SELECT emp_matricula,emp_nome,emp_salario
+FROM Empregados
+ORDER BY emp_matricula, emp_matricula,emp_nome,emp_salario;
+SELECT AVG(Emp_salario)
+From creditos;
+</code></pre>
+<hr>
+<p><b>
+Antes de iniciar a resolução das questões de 1, 2, 3, 4 e 5, crie um banco de dados
+chamado escola.
+A Figura 1 representa a estrutura de uma tabela usada para armazenar notas de alunos. 
+A) Crie uma tabela chamada notas conforme estrutura acima;
+B) Inclua a coluna dis_codigo, do tipo TINYINT, que será usada para armazenar o código
+da disciplina a qual está relacionada a nota informada;
+C) Adicione a coluna not_bimestre, do tipo TINYINT, que será usada para registrar o
+bimestre ao qual está relacionado à nota informada na coluna not_valor. Essa coluna
+deve estar entre not_valor e alu_nome;
+D) Remova a coluna alu_nome da tabela notas;
+E) Para finalizar a estrutura da tabela, crie a coluna alu_matricula, do tipo INT, antes da
+coluna dis_codigo, para armazenar a matrícula do aluno.</p>
+<p>Criar uma tabela chamada alunos com apenas três campos: alu_matricula(INT),
+alu_nomecompleto(VARCHAR com 50 posições), alu_email(VARCHAR com 10
+posições);
+B) Alterar o nome do campo “alu_nomecompleto” para apenas “alu_nome”;
+C) Aumentar o tamanho do campo alu_email de 10 posições para 30;
+D) Criar uma tabela chamada disciplinas com a seguinte estrutura: dis_codigo TINYINT,
+dis_nome VARCHAR(30) e dis_cargahoraria TINYINT
+) Criar uma tabela chamada cursos que armazenará os cursos nos quais existem
+alunos matriculados. A tabela deve armazenar apenas o código (cur_codigo) e o nome
+do curso (cur_nome), onde cur_codigo é a chave primária e o campo cur_nome não
+pode armazenar valores nulos.</p>
+<p>Destrua as tabelas notas, alunos e disciplinas;
+Recrie a tabela alunos 
+Recrie a tabela notas</p>
+<p>A) Para cada um dos 2 cursos inseridos anteriormente, matricule pelo menos 2 alunos.
+Em seguida, insira 2 registros na tabela disciplinas;
+B) Quantos alunos estão matriculados no curso ENG. DE SOFT?
+C) Gere um relatório, ordenado alfabeticamente, informando a quantidade de alunos por
+curso;
+D) Insira as notas de todos os alunos, apenas do primeiro bimestre, para as duas
+disciplinas cadastradas. Em seguida, gere um relatório informando a média das notas
+dos alunos (arredondando para duas casas decimais) por curso e por disciplina.
+</b>
+<center><img alt="Database" src="../imgs/her_for.jpg" /></center></p>
+<pre><code class="language-sql">CREATE DATABASE escola;
+USE escola;
+CREATE TABLE notas(
+not_identificador INT,
+not_valor FLOAT,
+alu_nome VARCHAR(50)
+);
+INSERT INTO(not_identificador,not_valor,alu_nome)
+VALUES(1,10,'Lucas Matheus Alves da Silva');
+ALTER TABLE notas add dis_codigo TINYINT;
+ALTER TABLE notas add not_bimestre TINYINT;
+ALTER TABLE alunos
+ add not_bimestre TINYINT
+after alu_nome;
+ALTER TABLE ALUNOS DROP COLUMN alu_nome;
+ALTER TABLE alunos add alu_matricula INT
+AFTER dis_codigo;
+
+CREATE TABLE alunos(
+alu_matricula INT,
+alu_nomecompleto VARCHAR(50),
+alu_email VARCHAR(10)
+ALTER TABLE alunos CHANGE COLUMN alu_nomecompleto alu_nome
+INT;
+ALTER TABLE alunos MODIFY COLUMN cli_email VARCHAR(30);
+CREATE TABLE DISCIPLINAS(
+dis_codigo TINYINT,
+dis_nome TINYINT,
+dis_nome VARCHAR(30)
+dis_cargahoraria TINYINT
+);
+
+
+Drop table alunos;
+drop table notas
+drop table disciplinas;
+alu_email varchar(30) DEFAULT NULL,
+);
+tabela disciplinas
+CREATE TABLE DISCIPLINAS(
+dis_codigo tinyint(4) DEFAULT NULL,
+dis_nome VARCHAR(30) DEFAULT NULL,
+dis_cargahoraria tinyint(4) DEFAULT NULL,
+);
+tabela notas
+CREATE TABLE NOTAS(
+not_identificador int(11) DEFAULT NULL,
+not_valor float DEFAULT NULL,
+not_bimestre TINYINT(4) DEFAULT NULL,
+alu_matricula INT(11) DEFAULT NULL,
+dis_codigo TINYINT(4) DEFAULT NULL
+);
+
+
+CREATE TABLE cursos(
+cur_codigo TINYINT(4) NOT NULL,
+cur_nome VARCHAR(20) NOT NULL,
+PRIMARY KEY(cur_codigo)
+);
+INSERT INTO ('cursos')
+VALUES(1,'ENG DE SOFT'),(2,'SIS.DE INFO');
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
